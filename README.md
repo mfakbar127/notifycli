@@ -13,9 +13,9 @@ $ notifycli --help
 notifycli - Unified notification system CLI
 
 Usage:
-  npx notifycli --provider <profile> --text <message>
-  npx notifycli --provider <profile> --text-file <path>
-  npx notifycli --provider <profile> --test
+  notifycli --provider <profile> --text <message>
+  notifycli --provider <profile> --text-file <path>
+  notifycli --provider <profile> --test
 
 Options:
   --provider <name>     Profile name from configuration (required)
@@ -32,28 +32,18 @@ Options:
 
 ## Install
 
-```bash
-npm install -g notifycli
-```
-
-Or run with npx:
+Build and link locally:
 
 ```bash
-npx notifycli --help
-```
-
-## Build Standalone Binary
-
-```bash
-# Install dependencies
 bun install
-
-# Build the CLI
 bun run build
+npm link
+```
 
-# The standalone binary is created at dist/cli.js
-chmod +x dist/cli.js
-dist/cli.js --help
+Then use the `notifycli` command anywhere:
+
+```bash
+notifycli --help
 ```
 
 ## Run
