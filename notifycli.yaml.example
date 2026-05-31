@@ -1,0 +1,27 @@
+profiles:
+  discord-alerts:
+    type: discord
+    webhook_url: https://discord.com/api/webhooks/example
+
+  discord-security:
+    type: discord
+    webhook_url: https://discord.com/api/webhooks/security
+
+  slack-eng:
+    type: slack
+    webhook_url: https://hooks.slack.com/services/example
+
+  slack-management:
+    type: slack
+    webhook_url: https://hooks.slack.com/services/management
+
+  jira-webhook:
+    type: webhook
+    url: https://jira.example.com/webhook
+    headers:
+      Authorization: Bearer token123
+      X-API-Key: secret
+
+  internal-api:
+    type: webhook
+    url: https://api.example.com/notify
